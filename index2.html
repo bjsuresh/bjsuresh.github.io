@@ -38,90 +38,6 @@
             --shadow: rgba(0, 0, 0, 0.3);
         }
 
-        /* Ocean Blue Theme */
-        [data-theme="ocean"] {
-            --primary: #0ea5e9;
-            --primary-dark: #0284c7;
-            --secondary: #06b6d4;
-            --bg-primary: #f0f9ff;
-            --bg-secondary: #e0f2fe;
-            --bg-card: #ffffff;
-            --text-primary: #0c4a6e;
-            --text-secondary: #0369a1;
-            --border: #bae6fd;
-            --shadow: rgba(14, 165, 233, 0.15);
-        }
-
-        /* Forest Green Theme */
-        [data-theme="forest"] {
-            --primary: #22c55e;
-            --primary-dark: #16a34a;
-            --secondary: #10b981;
-            --bg-primary: #f0fdf4;
-            --bg-secondary: #dcfce7;
-            --bg-card: #ffffff;
-            --text-primary: #14532d;
-            --text-secondary: #166534;
-            --border: #bbf7d0;
-            --shadow: rgba(34, 197, 94, 0.15);
-        }
-
-        /* Sunset Orange Theme */
-        [data-theme="sunset"] {
-            --primary: #f97316;
-            --primary-dark: #ea580c;
-            --secondary: #fb923c;
-            --bg-primary: #fff7ed;
-            --bg-secondary: #ffedd5;
-            --bg-card: #ffffff;
-            --text-primary: #7c2d12;
-            --text-secondary: #c2410c;
-            --border: #fed7aa;
-            --shadow: rgba(249, 115, 22, 0.15);
-        }
-
-        /* Purple/Violet Theme */
-        [data-theme="violet"] {
-            --primary: #a855f7;
-            --primary-dark: #9333ea;
-            --secondary: #c084fc;
-            --bg-primary: #faf5ff;
-            --bg-secondary: #f3e8ff;
-            --bg-card: #ffffff;
-            --text-primary: #581c87;
-            --text-secondary: #7e22ce;
-            --border: #e9d5ff;
-            --shadow: rgba(168, 85, 247, 0.15);
-        }
-
-        /* Rose/Pink Theme */
-        [data-theme="rose"] {
-            --primary: #ec4899;
-            --primary-dark: #db2777;
-            --secondary: #f472b6;
-            --bg-primary: #fdf2f8;
-            --bg-secondary: #fce7f3;
-            --bg-card: #ffffff;
-            --text-primary: #831843;
-            --text-secondary: #be185d;
-            --border: #fbcfe8;
-            --shadow: rgba(236, 72, 153, 0.15);
-        }
-
-        /* Cyberpunk Theme */
-        [data-theme="cyberpunk"] {
-            --primary: #ff00ff;
-            --primary-dark: #cc00cc;
-            --secondary: #00ffff;
-            --bg-primary: #0a0a0f;
-            --bg-secondary: #12121a;
-            --bg-card: #1a1a2e;
-            --text-primary: #ffffff;
-            --text-secondary: #00ffff;
-            --border: #ff00ff;
-            --shadow: rgba(255, 0, 255, 0.3);
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -213,7 +129,6 @@
             align-items: center;
             gap: 0.5rem;
             transition: var(--transition);
-            position: relative;
         }
 
         .theme-toggle:hover {
@@ -222,85 +137,6 @@
 
         .theme-icon {
             font-size: 1.2rem;
-        }
-
-        /* Theme Selector Dropdown */
-        .theme-selector {
-            position: relative;
-        }
-
-        .theme-btn {
-            background: var(--bg-secondary);
-            border: 2px solid var(--border);
-            border-radius: 50px;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: var(--transition);
-            color: var(--text-primary);
-            font-weight: 500;
-        }
-
-        .theme-btn:hover {
-            border-color: var(--primary);
-        }
-
-        .theme-dropdown {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            margin-top: 0.5rem;
-            background: var(--bg-card);
-            border: 2px solid var(--border);
-            border-radius: 15px;
-            padding: 0.5rem;
-            min-width: 180px;
-            box-shadow: 0 10px 40px var(--shadow);
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-            transition: var(--transition);
-            z-index: 1001;
-        }
-
-        .theme-selector:hover .theme-dropdown,
-        .theme-dropdown.active {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .theme-option {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 0.75rem 1rem;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: var(--transition);
-            color: var(--text-primary);
-        }
-
-        .theme-option:hover {
-            background: var(--bg-secondary);
-        }
-
-        .theme-option.active {
-            background: var(--primary);
-            color: white;
-        }
-
-        .theme-color {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            border: 2px solid var(--border);
-        }
-
-        .theme-option.active .theme-color {
-            border-color: white;
         }
 
         .mobile-toggle {
@@ -612,187 +448,57 @@
             color: var(--text-secondary);
         }
 
-        /* Projects - NEW ENHANCED DESIGN */
+        /* Projects */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
         }
 
         .project-card {
             background: var(--bg-card);
-            border-radius: 20px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 2px 10px var(--shadow);
+            box-shadow: 0 4px 15px var(--shadow);
             transition: var(--transition);
-            border: 1px solid var(--border);
-            position: relative;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
         }
 
         .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px var(--shadow);
-            border-color: var(--primary);
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px var(--shadow);
         }
 
         .project-image {
             width: 100%;
-            height: 220px;
+            height: 250px;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 4rem;
             color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .project-card:hover .project-image::before {
-            opacity: 1;
-        }
-
-        .project-image i {
-            position: relative;
-            z-index: 1;
-            transition: var(--transition);
-        }
-
-        .project-card:hover .project-image i {
-            transform: scale(1.1);
-        }
-
-        .project-number {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: rgba(255, 255, 255, 0.95);
-            color: var(--primary);
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 1.1rem;
-            z-index: 2;
         }
 
         .project-content {
-            padding: 2rem;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-category {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 0.35rem 1rem;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 1rem;
-            width: fit-content;
+            padding: 1.5rem;
         }
 
         .project-content h4 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            line-height: 1.3;
-            color: var(--text-primary);
-        }
-
-        .project-description {
-            color: var(--text-secondary);
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-            flex: 1;
+            margin-bottom: 0.75rem;
         }
 
         .project-tags {
             display: flex;
-            gap: 0.6rem;
+            gap: 0.5rem;
             flex-wrap: wrap;
-            margin-bottom: 1.5rem;
+            margin-top: 1rem;
         }
 
         .tag {
             background: var(--bg-secondary);
-            padding: 0.4rem 1rem;
+            padding: 0.25rem 0.75rem;
             border-radius: 50px;
             font-size: 0.85rem;
-            color: var(--text-primary);
-            font-weight: 500;
-            border: 1px solid var(--border);
-            transition: var(--transition);
-        }
-
-        .project-card:hover .tag {
-            border-color: var(--primary);
-            color: var(--primary);
-        }
-
-        .project-footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--border);
-        }
-
-        .project-link {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: var(--transition);
-        }
-
-        .project-link:hover {
-            gap: 0.8rem;
-        }
-
-        .project-link i {
-            transition: var(--transition);
-        }
-
-        .project-stats {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .project-stat {
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        .project-stat i {
             color: var(--primary);
         }
 
@@ -904,26 +610,6 @@
             .projects-grid {
                 grid-template-columns: 1fr;
             }
-
-            .theme-dropdown {
-                right: auto;
-                left: 50%;
-                transform: translateX(-50%) translateY(-10px);
-            }
-
-            .theme-selector:hover .theme-dropdown,
-            .theme-dropdown.active {
-                transform: translateX(-50%) translateY(0);
-            }
-
-            #skills > .container > div {
-                grid-template-columns: 1fr !important;
-                gap: 2rem !important;
-            }
-
-            #skills .tab-content-panel > div {
-                grid-template-columns: 1fr !important;
-            }
         }
 
         .back-to-top {
@@ -969,47 +655,9 @@
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li>
-                        <div class="theme-selector">
-                            <button class="theme-btn" id="themeToggle">
-                                <i class="fas fa-palette"></i>
-                                <span id="currentThemeName">Light</span>
-                                <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i>
-                            </button>
-                            <div class="theme-dropdown" id="themeDropdown">
-                                <div class="theme-option active" data-theme="light">
-                                    <span class="theme-color" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);"></span>
-                                    <span>Light</span>
-                                </div>
-                                <div class="theme-option" data-theme="dark">
-                                    <span class="theme-color" style="background: linear-gradient(135deg, #818cf8, #a78bfa);"></span>
-                                    <span>Dark</span>
-                                </div>
-                                <div class="theme-option" data-theme="ocean">
-                                    <span class="theme-color" style="background: linear-gradient(135deg, #0ea5e9, #06b6d4);"></span>
-                                    <span>Ocean Blue</span>
-                                </div>
-                                <div class="theme-option" data-theme="forest">
-                                    <span class="theme-color" style="background: linear-gradient(135deg, #22c55e, #10b981);"></span>
-                                    <span>Forest Green</span>
-                                </div>
-                                <div class="theme-option" data-theme="sunset">
-                                    <span class="theme-color" style="background: linear-gradient(135deg, #f97316, #fb923c);"></span>
-                                    <span>Sunset Orange</span>
-                                </div>
-                                <div class="theme-option" data-theme="violet">
-                                    <span class="theme-color" style="background: linear-gradient(135deg, #a855f7, #c084fc);"></span>
-                                    <span>Violet</span>
-                                </div>
-                                <div class="theme-option" data-theme="rose">
-                                    <span class="theme-color" style="background: linear-gradient(135deg, #ec4899, #f472b6);"></span>
-                                    <span>Rose Pink</span>
-                                </div>
-                                <div class="theme-option" data-theme="cyberpunk">
-                                    <span class="theme-color" style="background: linear-gradient(135deg, #ff00ff, #00ffff);"></span>
-                                    <span>Cyberpunk</span>
-                                </div>
-                            </div>
-                        </div>
+                        <button class="theme-toggle" id="themeToggle">
+                            <i class="fas fa-moon theme-icon"></i>
+                        </button>
                     </li>
                 </ul>
                 <button class="mobile-toggle" id="mobileToggle">
@@ -1109,132 +757,150 @@
         </div>
     </section>
 
-    <!-- Skills & Experience Section -->
+    <!-- Skills Section -->
     <section id="skills" style="background: var(--bg-secondary);">
         <div class="container">
             <div class="section-title">
-                <h2>Skills & Experience</h2>
-                <p>Standardized all output with a new, responsive, mobile-first approach and strategy, using Angular, Ionic, VueJS framework</p>
+                <h2>Technical Skills</h2>
+                <p>Technologies and frameworks I work with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">HTML5</span>
+                        <span class="skill-percentage">95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">CSS3 / SCSS</span>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">JavaScript / ES6+</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">Angular</span>
+                        <span class="skill-percentage">95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">Ionic Framework</span>
+                        <span class="skill-percentage">95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">Vue.js / Nuxt</span>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">Node.js / Express</span>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-name">Git / Version Control</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-title">
+                <h2>Experience & Education</h2>
+                <p>My professional journey and academic background</p>
             </div>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
-                <!-- Skills Column -->
                 <div>
-                    <h3 style="margin-bottom: 2rem;">My Skills</h3>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-                        <div>
-                            <div class="skill-card">
-                                <div class="skill-header">
-                                    <span class="skill-name">HTML</span>
-                                    <span class="skill-percentage">95%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 95%; background: var(--primary);"></div>
-                                </div>
-                            </div>
-                            <div class="skill-card" style="margin-top: 1.5rem;">
-                                <div class="skill-header">
-                                    <span class="skill-name">CSS</span>
-                                    <span class="skill-percentage">85%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 85%; background: #ffc107;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-card" style="margin-top: 1.5rem;">
-                                <div class="skill-header">
-                                    <span class="skill-name">Javascript</span>
-                                    <span class="skill-percentage">90%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 90%; background: #dc3545;"></div>
-                                </div>
+                    <h3 style="margin-bottom: 2rem;"><i class="fas fa-briefcase" style="color: var(--primary);"></i> Work Experience</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-card">
+                                <h5>Software Engineer</h5>
+                                <p class="timeline-date">2023 - Present</p>
+                                <h6 class="timeline-company">Supra Controls Pvt Ltd</h6>
+                                <p style="margin-top: 1rem; color: var(--text-secondary);">Developing enterprise-level web and mobile applications with modern technologies</p>
                             </div>
                         </div>
-                        <div>
-                            <div class="skill-card">
-                                <div class="skill-header">
-                                    <span class="skill-name">Angular</span>
-                                    <span class="skill-percentage">95%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 95%; background: #dc3545;"></div>
-                                </div>
+                        <div class="timeline-item">
+                            <div class="timeline-card">
+                                <h5>Web Developer</h5>
+                                <p class="timeline-date">2023 - 2023</p>
+                                <h6 class="timeline-company">Coderzbot Innovations</h6>
+                                <p style="margin-top: 1rem; color: var(--text-secondary);">Created responsive websites and web applications using modern frameworks</p>
                             </div>
-                            <div class="skill-card" style="margin-top: 1.5rem;">
-                                <div class="skill-header">
-                                    <span class="skill-name">Ionic</span>
-                                    <span class="skill-percentage">95%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 95%; background: #dc3545;"></div>
-                                </div>
-                            </div>
-                            <div class="skill-card" style="margin-top: 1.5rem;">
-                                <div class="skill-header">
-                                    <span class="skill-name">Node / Feathers JS (Basics)</span>
-                                    <span class="skill-percentage">80%</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 80%; background: #0dcaf0;"></div>
-                                </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-card">
+                                <h5>Web Developer</h5>
+                                <p class="timeline-date">2021 - 2023</p>
+                                <h6 class="timeline-company">ViewZource Technologies</h6>
+                                <p style="margin-top: 1rem; color: var(--text-secondary);">Developed and maintained web applications using Angular and Ionic</p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Experience & Education Tabs -->
-                <div id="experience">
-                    <div class="tab-container" style="margin-bottom: 2rem;">
-                        <div style="display: flex; border: 2px solid var(--primary); border-radius: 50px; overflow: hidden;">
-                            <button class="tab-btn active" onclick="showTab('experience-tab')" style="flex: 1; padding: 1rem; background: var(--primary); color: white; border: none; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: var(--transition);">Experience</button>
-                            <button class="tab-btn" onclick="showTab('education-tab')" style="flex: 1; padding: 1rem; background: transparent; color: var(--text-primary); border: none; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: var(--transition);">Education</button>
-                        </div>
-                    </div>
-
-                    <!-- Experience Tab -->
-                    <div id="experience-tab" class="tab-content-panel" style="display: block;">
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                <div>
+                    <h3 style="margin-bottom: 2rem;"><i class="fas fa-graduation-cap" style="color: var(--primary);"></i> Education</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
                             <div class="timeline-card">
-                                <h5>Web Developer</h5>
-                                <hr style="border-color: var(--primary); margin: 0.5rem 0;">
-                                <p class="timeline-date">2021 - 2023</p>
-                                <h6 class="timeline-company">ViewZource Technologies</h6>
-                            </div>
-                            <div class="timeline-card">
-                                <h5>Web Developer</h5>
-                                <hr style="border-color: var(--primary); margin: 0.5rem 0;">
-                                <p class="timeline-date">2023 - 2023</p>
-                                <h6 class="timeline-company">Coderzbot Innovations</h6>
-                            </div>
-                            <div class="timeline-card">
-                                <h5>Software Engineer</h5>
-                                <hr style="border-color: var(--primary); margin: 0.5rem 0;">
-                                <p class="timeline-date">2023 - Present</p>
-                                <h6 class="timeline-company">Supra Controls Pvt Ltd</h6>
+                                <h5>Bachelor of Engineering</h5>
+                                <p class="timeline-date">2016 - 2020</p>
+                                <h6 class="timeline-company">Gnanamani College of Technology</h6>
+                                <p style="margin-top: 1rem; color: var(--text-secondary);">Specialized in Computer Science and Engineering</p>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Education Tab -->
-                    <div id="education-tab" class="tab-content-panel" style="display: none;">
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div class="timeline-item">
                             <div class="timeline-card">
-                                <h5>SSLC</h5>
-                                <hr style="border-color: var(--primary); margin: 0.5rem 0;">
-                                <p class="timeline-date">2013 - 2014</p>
-                                <h6 class="timeline-company">M.D.V Matric Higher Secondary School</h6>
-                            </div>
-                            <div class="timeline-card">
-                                <h5>HSC</h5>
-                                <hr style="border-color: var(--primary); margin: 0.5rem 0;">
+                                <h5>Higher Secondary Certificate (HSC)</h5>
                                 <p class="timeline-date">2014 - 2016</p>
                                 <h6 class="timeline-company">A.S.S Matric Higher Secondary School</h6>
                             </div>
+                        </div>
+                        <div class="timeline-item">
                             <div class="timeline-card">
-                                <h5>B.E - EEE</h5>
-                                <hr style="border-color: var(--primary); margin: 0.5rem 0;">
-                                <p class="timeline-date">2016 - 2020</p>
-                                <h6 class="timeline-company">Gnanamani College of Technology</h6>
+                                <h5>SSLC</h5>
+                                <p class="timeline-date">2013 - 2014</p>
+                                <h6 class="timeline-company">M.D.V Matric Higher Secondary School</h6>
                             </div>
                         </div>
                     </div>
@@ -1243,184 +909,95 @@
         </div>
     </section>
 
-    <!-- Projects Section - ENHANCED DESIGN -->
+    <!-- Projects Section -->
     <section id="projects" style="background: var(--bg-secondary);">
         <div class="container">
             <div class="section-title">
                 <h2>Featured Projects</h2>
-                <p>Showcasing my recent work and technical expertise</p>
+                <p>Some of my recent work and contributions</p>
             </div>
             <div class="projects-grid">
-                <!-- Project 1: E-Logbook -->
                 <div class="project-card">
                     <div class="project-image">
-                        <span class="project-number">01</span>
-                        <i class="fas fa-book"></i>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">Mobile App</span>
-                        <h4>E-Logbook</h4>
-                        <p class="project-description">Digital logbook application for efficient record-keeping and data management. Features include real-time data entry, report generation, user authentication, and seamless synchronization with backend services.</p>
-                        <div class="project-tags">
-                            <span class="tag">Ionic</span>
-                            <span class="tag">Angular</span>
-                            <span class="tag">.NET</span>
-                            <span class="tag">REST API</span>
-                        </div>
-                        <div class="project-footer">
-                            <a href="#" class="project-link">
-                                View Details <i class="fas fa-arrow-right"></i>
-                            </a>
-                            <div class="project-stats">
-                                <span class="project-stat">
-                                    <i class="fas fa-star"></i> Featured
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2: Web Reports -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <span class="project-number">02</span>
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">Web Application</span>
-                        <h4>Web Reports</h4>
-                        <p class="project-description">Comprehensive web-based reporting system with interactive dashboards, data visualization, advanced filtering capabilities, and automated report generation with export functionality.</p>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">REST API</span>
-                            <span class="tag">Charts</span>
-                        </div>
-                        <div class="project-footer">
-                            <a href="#" class="project-link">
-                                View Details <i class="fas fa-arrow-right"></i>
-                            </a>
-                            <div class="project-stats">
-                                <span class="project-stat">
-                                    <i class="fas fa-database"></i> Analytics
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3: SAMA Mobile App -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <span class="project-number">03</span>
                         <i class="fas fa-mobile-alt"></i>
                     </div>
                     <div class="project-content">
-                        <span class="project-category">Mobile App</span>
-                        <h4>SAMA Mobile App</h4>
-                        <p class="project-description">Feature-rich mobile application with intuitive user interface, offline capabilities, push notifications, and seamless integration with enterprise backend systems for enhanced productivity.</p>
+                        <h4>Mobile E-Commerce App</h4>
+                        <p style="color: var(--text-secondary);">Full-featured e-commerce mobile application built with Ionic and Angular, featuring real-time updates and secure payment integration.</p>
                         <div class="project-tags">
                             <span class="tag">Ionic</span>
                             <span class="tag">Angular</span>
-                            <span class="tag">Capacitor</span>
-                            <span class="tag">TypeScript</span>
-                        </div>
-                        <div class="project-footer">
-                            <a href="#" class="project-link">
-                                View Details <i class="fas fa-arrow-right"></i>
-                            </a>
-                            <div class="project-stats">
-                                <span class="project-stat">
-                                    <i class="fas fa-rocket"></i> Live
-                                </span>
-                            </div>
+                            <span class="tag">Firebase</span>
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 4: Web Client -->
                 <div class="project-card">
                     <div class="project-image">
-                        <span class="project-number">04</span>
                         <i class="fas fa-laptop-code"></i>
                     </div>
                     <div class="project-content">
-                        <span class="project-category">Web Application</span>
-                        <h4>Web Client</h4>
-                        <p class="project-description">Dynamic web client application built with vanilla JavaScript for optimal performance. Features include responsive design, real-time updates, interactive UI components, and efficient data handling.</p>
+                        <h4>Enterprise Dashboard</h4>
+                        <p style="color: var(--text-secondary);">Complex admin dashboard for business management with advanced analytics, data visualization, and reporting features.</p>
                         <div class="project-tags">
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">HTML5</span>
-                            <span class="tag">CSS3</span>
-                            <span class="tag">REST API</span>
-                        </div>
-                        <div class="project-footer">
-                            <a href="#" class="project-link">
-                                View Details <i class="fas fa-arrow-right"></i>
-                            </a>
-                            <div class="project-stats">
-                                <span class="project-stat">
-                                    <i class="fas fa-code"></i> Vanilla JS
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5: Change Management -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <span class="project-number">05</span>
-                        <i class="fas fa-tasks"></i>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-category">Mobile App</span>
-                        <h4>Change Management</h4>
-                        <p class="project-description">Enterprise change management solution for tracking and managing organizational changes. Includes workflow automation, approval processes, audit trails, and comprehensive reporting features.</p>
-                        <div class="project-tags">
-                            <span class="tag">Ionic</span>
                             <span class="tag">Angular</span>
-                            <span class="tag">TypeScript</span>
-                            <span class="tag">REST API</span>
-                        </div>
-                        <div class="project-footer">
-                            <a href="#" class="project-link">
-                                View Details <i class="fas fa-arrow-right"></i>
-                            </a>
-                            <div class="project-stats">
-                                <span class="project-stat">
-                                    <i class="fas fa-briefcase"></i> Enterprise
-                                </span>
-                            </div>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 6: SAMA Website -->
                 <div class="project-card">
                     <div class="project-image">
-                        <span class="project-number">06</span>
                         <i class="fas fa-globe"></i>
                     </div>
                     <div class="project-content">
-                        <span class="project-category">Website</span>
-                        <h4>SAMA Website</h4>
-                        <p class="project-description">Modern, responsive corporate website with dynamic content management, SEO optimization, interactive components, and seamless user experience across all devices and platforms.</p>
+                        <h4>Corporate Website</h4>
+                        <p style="color: var(--text-secondary);">Modern, responsive corporate website with CMS integration, SEO optimization, and multi-language support.</p>
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Nuxt</span>
+                            <span class="tag">Strapi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-content">
+                        <h4>Analytics Platform</h4>
+                        <p style="color: var(--text-secondary);">Real-time analytics platform with interactive charts, data filtering, and export capabilities for business intelligence.</p>
                         <div class="project-tags">
                             <span class="tag">Angular</span>
-                            <span class="tag">TypeScript</span>
-                            <span class="tag">SCSS</span>
-                            <span class="tag">Responsive</span>
+                            <span class="tag">D3.js</span>
+                            <span class="tag">REST API</span>
                         </div>
-                        <div class="project-footer">
-                            <a href="#" class="project-link">
-                                View Details <i class="fas fa-arrow-right"></i>
-                            </a>
-                            <div class="project-stats">
-                                <span class="project-stat">
-                                    <i class="fas fa-desktop"></i> Web
-                                </span>
-                            </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="project-content">
+                        <h4>Social Networking App</h4>
+                        <p style="color: var(--text-secondary);">Social platform with user profiles, real-time messaging, notifications, and media sharing capabilities.</p>
+                        <div class="project-tags">
+                            <span class="tag">Ionic</span>
+                            <span class="tag">Socket.io</span>
+                            <span class="tag">Express</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="project-content">
+                        <h4>Inventory Management</h4>
+                        <p style="color: var(--text-secondary);">Comprehensive inventory tracking system with barcode scanning, stock alerts, and supplier management.</p>
+                        <div class="project-tags">
+                            <span class="tag">Angular</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Node.js</span>
                         </div>
                     </div>
                 </div>
@@ -1515,62 +1092,29 @@
     </a>
 
     <script>
-        // Theme Selector
-        const html = document.documentElement;
-        const themeDropdown = document.getElementById('themeDropdown');
-        const themeOptions = document.querySelectorAll('.theme-option');
-        const currentThemeName = document.getElementById('currentThemeName');
+        // Theme Toggle
         const themeToggle = document.getElementById('themeToggle');
-
-        const themeNames = {
-            'light': 'Light',
-            'dark': 'Dark',
-            'ocean': 'Ocean Blue',
-            'forest': 'Forest Green',
-            'sunset': 'Sunset Orange',
-            'violet': 'Violet',
-            'rose': 'Rose Pink',
-            'cyberpunk': 'Cyberpunk'
-        };
-
-        // Load saved theme
+        const html = document.documentElement;
+        const themeIcon = themeToggle.querySelector('.theme-icon');
+        
         const savedTheme = localStorage.getItem('theme') || 'light';
-        setTheme(savedTheme);
+        html.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
 
-        // Toggle dropdown on click
-        themeToggle.addEventListener('click', (e) => {
-            e.stopPropagation();
-            themeDropdown.classList.toggle('active');
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
         });
 
-        // Close dropdown when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.theme-selector')) {
-                themeDropdown.classList.remove('active');
+        function updateThemeIcon(theme) {
+            if (theme === 'dark') {
+                themeIcon.className = 'fas fa-sun theme-icon';
+            } else {
+                themeIcon.className = 'fas fa-moon theme-icon';
             }
-        });
-
-        // Theme option click handlers
-        themeOptions.forEach(option => {
-            option.addEventListener('click', () => {
-                const theme = option.getAttribute('data-theme');
-                setTheme(theme);
-                localStorage.setItem('theme', theme);
-                themeDropdown.classList.remove('active');
-            });
-        });
-
-        function setTheme(theme) {
-            html.setAttribute('data-theme', theme);
-            currentThemeName.textContent = themeNames[theme];
-
-            // Update active state
-            themeOptions.forEach(opt => {
-                opt.classList.remove('active');
-                if (opt.getAttribute('data-theme') === theme) {
-                    opt.classList.add('active');
-                }
-            });
         }
 
         // Mobile Menu
@@ -1667,28 +1211,6 @@
         const skillsSection = document.getElementById('skills');
         if (skillsSection) {
             observer.observe(skillsSection);
-        }
-
-        // Tab switching functionality
-        function showTab(tabId) {
-            // Hide all tab panels
-            document.querySelectorAll('.tab-content-panel').forEach(panel => {
-                panel.style.display = 'none';
-            });
-
-            // Remove active class from all buttons
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.style.background = 'transparent';
-                btn.style.color = 'var(--text-primary)';
-            });
-
-            // Show selected tab
-            document.getElementById(tabId).style.display = 'block';
-
-            // Add active style to clicked button
-            const activeBtn = event.target;
-            activeBtn.style.background = 'var(--primary)';
-            activeBtn.style.color = 'white';
         }
     </script>
 </body>

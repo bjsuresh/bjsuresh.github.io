@@ -4,7 +4,31 @@
     --secondary: #FFC448;
     --light: #FAFAFB;
     --dark: #12141D;
-}
+
+            --primary-dark: #4f46e5;
+            /* --secondary: #8b5cf6; */
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-card: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #64748b;
+            --border: #e2e8f0;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        [data-theme="dark"] {
+            --primary: #818cf8;
+            --primary-dark: #6366f1;
+            --secondary: #a78bfa;
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-card: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --border: #334155;
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
 
 .back-to-top {
     position: fixed;
@@ -427,4 +451,16 @@
 
 .testimonial-carousel .owl-dot.active::after {
     background: var(--primary);
+}
+
+.timeline-card {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px var(--shadow);
+}
+
+.timeline-card h5 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
 }
