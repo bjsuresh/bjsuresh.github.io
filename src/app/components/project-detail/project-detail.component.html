@@ -1,0 +1,74 @@
+<section class="project-detail" *ngIf="project() as p; else notFound">
+  <div class="container">
+    <a routerLink="/" fragment="projects" class="back-link">
+      <i class="fas fa-arrow-left"></i> Back to Projects
+    </a>
+
+    <header class="detail-header">
+      <span class="project-category">{{ p.category }}</span>
+      <h1>{{ p.title }}</h1>
+      <p class="detail-description">{{ p.description }}</p>
+      <div class="project-tags">
+        <span class="tag" *ngFor="let tag of p.tags">{{ tag }}</span>
+      </div>
+    </header>
+
+    <h2 class="screenshots-title">
+      <i class="fas fa-images"></i> Screenshots
+    </h2>
+
+    <div class="screenshots-grid" *ngIf="p.screenshots.length; else empty">
+      <button
+        type="button"
+        class="screenshot"
+        *ngFor="let src of p.screenshots; let i = index"
+        (click)="openLightbox(i)">
+        <img [src]="src" [alt]="p.title + ' screenshot ' + (i + 1)" loading="lazy" />
+        <span class="screenshot-overlay">
+          <i class="fas fa-search-plus"></i>
+        </span>
+      </button>
+    </div>
+
+    <ng-template #empty>
+      <div class="screenshots-empty">
+        <i class="fas fa-image"></i>
+        <p>Screenshots coming soon.</p>
+      </div>
+    </ng-template>
+  </div>
+
+  <div class="lightbox" *ngIf="lightboxIndex() !== null" (click)="closeLightbox()">
+    <button class="lightbox-close" (click)="closeLightbox(); $event.stopPropagation()">
+      <i class="fas fa-times"></i>
+    </button>
+    <button class="lightbox-nav prev" (click)="prev(); $event.stopPropagation()">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <img
+      class="lightbox-image"
+      [src]="p.screenshots[lightboxIndex()!]"
+      [alt]="p.title + ' screenshot'"
+      (click)="$event.stopPropagation()" />
+    <button class="lightbox-nav next" (click)="next(); $event.stopPropagation()">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+    <div class="lightbox-counter">
+      {{ lightboxIndex()! + 1 }} / {{ p.screenshots.length }}
+    </div>
+  </div>
+</section>
+
+<ng-template #notFound>
+  <section class="project-detail">
+    <div class="container">
+      <a routerLink="/" fragment="projects" class="back-link">
+        <i class="fas fa-arrow-left"></i> Back to Projects
+      </a>
+      <div class="not-found">
+        <h1>Project Not Found</h1>
+        <p>The project you’re looking for doesn’t exist.</p>
+      </div>
+    </div>
+  </section>
+</ng-template>

@@ -1,0 +1,61 @@
+<section id="skills">
+  <div class="container">
+    <div class="section-title">
+      <h2>Skills &amp; Experience</h2>
+      <p>Standardized all output with a new, responsive, mobile-first approach and strategy, using Angular, Ionic, VueJS framework</p>
+    </div>
+    <div class="skills-layout">
+      <div>
+        <h3 class="column-title">My Skills</h3>
+        <div class="skills-grid">
+          <div class="skill-card" *ngFor="let skill of skills">
+            <div class="skill-header">
+              <span class="skill-name">{{ skill.name }}</span>
+              <span class="skill-percentage">{{ skill.percentage }}%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" [style.width.%]="skill.percentage" [style.background]="skill.color"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="experience">
+        <div class="tab-container">
+          <div class="tab-buttons">
+            <button
+              class="tab-btn"
+              [class.active]="activeTab() === 'experience'"
+              (click)="setTab('experience')">Experience</button>
+            <button
+              class="tab-btn"
+              [class.active]="activeTab() === 'education'"
+              (click)="setTab('education')">Education</button>
+          </div>
+        </div>
+
+        <div class="tab-content-panel" *ngIf="activeTab() === 'experience'">
+          <div class="timeline-grid">
+            <div class="timeline-card" *ngFor="let item of experience">
+              <h5>{{ item.title }}</h5>
+              <hr>
+              <p class="timeline-date">{{ item.date }}</p>
+              <h6 class="timeline-company">{{ item.company }}</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content-panel" *ngIf="activeTab() === 'education'">
+          <div class="timeline-grid">
+            <div class="timeline-card" *ngFor="let item of education">
+              <h5>{{ item.title }}</h5>
+              <hr>
+              <p class="timeline-date">{{ item.date }}</p>
+              <h6 class="timeline-company">{{ item.company }}</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

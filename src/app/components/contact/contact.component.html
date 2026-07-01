@@ -1,0 +1,54 @@
+<section id="contact">
+  <div class="container">
+    <div class="section-title">
+      <h2>Get In Touch</h2>
+      <p>Let's work together on your next project</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="contact-details">
+            <h4>Location</h4>
+            <p>114A, Bangala St-4, Rajagoundampalayam<br>Tiruchengode, Namakkal - 637209<br>Tamil Nadu, India</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-phone"></i></div>
+          <div class="contact-details">
+            <h4>Phone</h4>
+            <p>+91 75300 30605</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div class="contact-details">
+            <h4>Email</h4>
+            <p>sureshjayaraman1999&#64;gmail.com</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-share-alt"></i></div>
+          <div class="contact-details">
+            <h4>Follow Me</h4>
+            <div class="social-links">
+              <a *ngFor="let link of socialLinks" [href]="link.href" class="social-link">
+                <i class="fab" [ngClass]="link.icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="message-panel">
+        <h3 class="message-heading">Send Me a Message</h3>
+        <p class="message-intro">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+        <div class="message-cards">
+          <div class="timeline-card" *ngFor="let card of messageCards">
+            <h5><i class="fas" [ngClass]="card.icon"></i> {{ card.title }}</h5>
+            <p>{{ card.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

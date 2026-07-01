@@ -1,0 +1,27 @@
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h3>Hello, I'm</h3>
+        <h1>Suresh Jayaraman</h1>
+        <h2><span class="typing-text">{{ typed() }}</span></h2>
+        <p class="hero-tagline">Passionate about creating innovative web and mobile applications with modern technologies. Specialized in Angular, Ionic, and Vue.js frameworks.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary" (click)="smoothScroll($event, '#contact')">
+            <i class="fas fa-envelope"></i> Get In Touch
+          </a>
+          <a href="#projects" class="btn btn-secondary" (click)="smoothScroll($event, '#projects')">
+            <i class="fas fa-briefcase"></i> View Projects
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-image-wrapper">
+          <div class="hero-image-inner">
+            <i class="fas fa-code"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

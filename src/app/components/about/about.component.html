@@ -1,0 +1,35 @@
+<section id="about">
+  <div class="container">
+    <div class="section-title">
+      <h2>About Me</h2>
+      <p>Get to know more about my background and expertise</p>
+    </div>
+    <div class="about-content">
+      <div class="about-text">
+        <div class="experience-badge">
+          <div class="years">
+            <h1>5+</h1>
+            <h5>Years</h5>
+          </div>
+          <h3>of working experience as a Full Stack Developer</h3>
+        </div>
+        <p>I'm a passionate software developer looking for opportunities to build my career and achieve greater practical excellence in the software industry. With a hardworking nature and excellent communication skills, I explore requirements and deliver innovative solutions.</p>
+        <ul class="feature-list">
+          <li *ngFor="let feature of features">
+            <i class="fas fa-check-circle"></i>
+            <span>{{ feature.text }}</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="quick-facts-heading">Quick Facts</h3>
+        <div class="quick-facts">
+          <div class="timeline-card" *ngFor="let fact of quickFacts">
+            <h5><i class="fas" [ngClass]="fact.icon"></i> {{ fact.title }}</h5>
+            <p>{{ fact.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

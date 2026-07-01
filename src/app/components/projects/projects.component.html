@@ -1,0 +1,34 @@
+<section id="projects">
+  <div class="container">
+    <div class="section-title">
+      <h2>Featured Projects</h2>
+      <p>Showcasing my recent work and technical expertise</p>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card" *ngFor="let project of projects">
+        <div class="project-image">
+          <span class="project-number">{{ project.number }}</span>
+          <i class="fas" [ngClass]="project.icon"></i>
+        </div>
+        <div class="project-content">
+          <span class="project-category">{{ project.category }}</span>
+          <h4>{{ project.title }}</h4>
+          <p class="project-description">{{ project.description }}</p>
+          <div class="project-tags">
+            <span class="tag" *ngFor="let tag of project.tags">{{ tag }}</span>
+          </div>
+          <div class="project-footer">
+            <a [routerLink]="['/projects', project.id]" class="project-link">
+              View Details <i class="fas fa-arrow-right"></i>
+            </a>
+            <div class="project-stats">
+              <span class="project-stat">
+                <i class="fas" [ngClass]="project.statIcon"></i> {{ project.statLabel }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
