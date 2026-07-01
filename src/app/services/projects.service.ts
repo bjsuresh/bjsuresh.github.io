@@ -27,34 +27,14 @@ export class ProjectsService {
       statIcon: 'fa-rocket',
       statLabel: 'Live',
       screenshots: [
-        '/assets/Mobile Apk2/1779454250235.jpg',
-        '/assets/Mobile Apk2/1779454250266.jpg',
-        '/assets/Mobile Apk2/1779454250299.jpg',
-        '/assets/Mobile Apk2/1779454250326.jpg',
-        '/assets/Mobile Apk2/1779454250357.jpg',
-        '/assets/Mobile Apk2/1779454250390.jpg',
-        '/assets/Mobile Apk2/1779454293423.jpg',
-        '/assets/Mobile Apk2/1779454293471.jpg',
-        '/assets/Mobile Apk2/1779456506932.jpg',
-        '/assets/Mobile Apk2/1779456506978.jpg',
-        '/assets/Mobile Apk2/1779456507011.jpg',
-        '/assets/Mobile Apk2/1779456507046.jpg',
-        '/assets/Mobile Apk2/1779456507073.jpg',
-        '/assets/Mobile Apk2/1779456507104.jpg',
-        '/assets/Mobile Apk2/1779456507130.jpg',
-        '/assets/Mobile Apk2/1779456507157.jpg',
-        '/assets/Mobile Apk2/realtime trend.jpg',
-        '/assets/Mobile Apk2/1M Hist trend.jpg',
-        '/assets/Mobile Apk2/bbl chart.jpg',
-        '/assets/Mobile Apk2/bbl-chart props1.jpg',
-        '/assets/Mobile Apk2/bbl-chart props2.jpg',
-        '/assets/Mobile Apk2/3d chart.jpg',
-        '/assets/Mobile Apk2/3d chart props.jpg',
-        '/assets/Mobile Apk2/heatmap.jpg',
-        '/assets/Mobile Apk2/heatmap props1.jpg',
-        '/assets/Mobile Apk2/heatmap props2.jpg',
-        '/assets/Mobile Apk2/circular gauge.jpg',
-        '/assets/Mobile Apk2/linear gauge.jpg'
+        '/assets/Mobile Apk2/Screenshot 2026-07-01 145344.png',
+        '/assets/Mobile Apk2/Screenshot 2026-07-01 145356.png',
+        '/assets/Mobile Apk2/Screenshot 2026-07-01 145407.png',
+        '/assets/Mobile Apk2/Screenshot 2026-07-01 145417.png',
+        '/assets/Mobile Apk2/Screenshot 2026-07-01 145425.png',
+        '/assets/Mobile Apk2/Screenshot 2026-07-01 145436.png',
+        '/assets/Mobile Apk2/Screenshot 2026-07-01 145446.png',
+        '/assets/Mobile Apk2/Screenshot 2026-07-01 145451.png'
       ]
     },
     {
@@ -123,7 +103,25 @@ export class ProjectsService {
       tags: ['Ionic', 'Angular', 'Cordova', 'TypeScript'],
       statIcon: 'fa-rocket',
       statLabel: 'Live',
-      screenshots: []
+      screenshots: [
+        '/assets/Mobile Apk/Screenshot 2026-07-01 234203.png',
+        '/assets/Mobile Apk/Screenshot 2026-07-01 234251.png',
+        '/assets/Mobile Apk/Screenshot 2026-07-01 234319.png'
+      ]
+    },
+    {
+      id: 'logbook-assistant',
+      number: '09',
+      icon: 'fa-robot',
+      category: 'Mobile App',
+      title: 'Logbook Assistant Chatbot',
+      description: 'AI-powered chatbot assistant for logbook operations. Enables operators to query records, log events, and get contextual guidance through a conversational interface built as a cross-platform Ionic mobile app.',
+      tags: ['Ionic', 'Angular', 'Capacitor', 'AI Chatbot'],
+      statIcon: 'fa-comments',
+      statLabel: 'AI Assistant',
+      screenshots: [
+        '/assets/logbook-assistant/Screenshot 2026-07-01 233447.png'
+      ]
     },
     {
       id: 'web-reports',
