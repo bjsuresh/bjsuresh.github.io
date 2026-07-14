@@ -18,7 +18,7 @@ export class ProjectsService {
   readonly projects: Project[] = [
         {
       id: 'sama-mobile-app-v2',
-      number: '07',
+      number: '01',
       icon: 'fa-mobile-alt',
       category: 'Mobile App',
       title: 'SAMA Mobile App V2',
@@ -27,6 +27,7 @@ export class ProjectsService {
       statIcon: 'fa-rocket',
       statLabel: 'Live',
       screenshots: [
+        '/assets/Mobile Apk2/Screenshot 2026-07-01 145250.png',
         '/assets/Mobile Apk2/Screenshot 2026-07-01 145344.png',
         '/assets/Mobile Apk2/Screenshot 2026-07-01 145356.png',
         '/assets/Mobile Apk2/Screenshot 2026-07-01 145407.png',
@@ -39,7 +40,7 @@ export class ProjectsService {
     },
     {
       id: 'e-logbook',
-      number: '01',
+      number: '02',
       icon: 'fa-book',
       category: 'Mobile App',
       title: 'E-Logbook Mobile App',
@@ -59,7 +60,7 @@ export class ProjectsService {
     },
     {
       id: 'ae-web-client',
-      number: '08',
+      number: '03',
       icon: 'fa-chart-line',
       category: 'Web Application',
       title: 'AE Web Client',
@@ -68,17 +69,26 @@ export class ProjectsService {
       statIcon: 'fa-chart-line',
       statLabel: 'Analytics',
       screenshots: [
+        '/assets/AE Webclient/login.png',
+        '/assets/AE Webclient/realtime_alrms&events.png',
+        '/assets/AE Webclient/alarms_tables.png',
+        '/assets/AE Webclient/system_alarm.png',
+        '/assets/AE Webclient/operatoraction.png',
+        '/assets/AE Webclient/freq_analysis.png',
+        '/assets/AE Webclient/freq_analysis2.png',
+        '/assets/AE Webclient/analysis_settings.png',
+        '/assets/AE Webclient/edit_control.png',
+        '/assets/AE Webclient/edit_control2.png',
+        '/assets/AE Webclient/reports_viewer.png',
+        '/assets/AE Webclient/settings.png',
         '/assets/AE Webclient/KPI Radar Chart.jpg',
         '/assets/AE Webclient/Alarm Performance Indication Bar chart.jpg',
-        '/assets/AE Webclient/SteadystateandUpsetstate.jpg',
-        '/assets/AE Webclient/WhatsApp Image 2024-09-10 at 8.51.13 PM.jpeg',
-        '/assets/AE Webclient/WhatsApp Image 2024-09-10 at 8.51.13 PM (1).jpeg',
-        '/assets/AE Webclient/WhatsApp Image 2024-09-10 at 8.51.13 PM (2).jpeg'
+        '/assets/AE Webclient/SteadystateandUpsetstate.jpg'
       ]
     },
     {
       id: 'sama-website',
-      number: '06',
+      number: '04',
       icon: 'fa-globe',
       category: 'Website',
       title: 'SAMA Website',
@@ -95,7 +105,7 @@ export class ProjectsService {
     },
     {
       id: 'sama-mobile-app',
-      number: '03',
+      number: '05',
       icon: 'fa-mobile-alt',
       category: 'Mobile App',
       title: 'SAMA Mobile App',
@@ -111,7 +121,7 @@ export class ProjectsService {
     },
     {
       id: 'logbook-assistant',
-      number: '09',
+      number: '06',
       icon: 'fa-robot',
       category: 'Mobile App',
       title: 'Logbook Assistant Chatbot',
@@ -125,7 +135,7 @@ export class ProjectsService {
     },
     {
       id: 'web-reports',
-      number: '02',
+      number: '07',
       icon: 'fa-chart-bar',
       category: 'Web Application',
       title: 'Web Reports',
@@ -134,6 +144,17 @@ export class ProjectsService {
       statIcon: 'fa-database',
       statLabel: 'Analytics',
       screenshots: [
+        '/assets/Web Reports/login.png',
+        '/assets/Web Reports/web reports dashboard.png',
+        '/assets/Web Reports/AIZWAL Dashboard Report.png',
+        '/assets/Web Reports/India Powerplants.png',
+        '/assets/Web Reports/Kamudi Powerplant.png',
+        '/assets/Web Reports/Kamudi Powerplant by inverter.png',
+        '/assets/Web Reports/NTMAC.png',
+        '/assets/Web Reports/NTMAC_MX.png',
+        '/assets/Web Reports/Screenshot 2025-04-02 182449.png',
+        '/assets/Web Reports/Screenshot 2025-04-02 182607.png',
+        '/assets/Web Reports/Screenshot 2025-04-02 182705.png',
         '/assets/Web Reports/Screenshot 2025-05-13 185229.png',
         '/assets/Web Reports/Screenshot 2025-05-13 185320.png',
         '/assets/Web Reports/Screenshot 2025-06-08 215509.png',
@@ -145,7 +166,7 @@ export class ProjectsService {
     },
     {
       id: 'change-management',
-      number: '05',
+      number: '08',
       icon: 'fa-tasks',
       category: 'Web Application',
       title: 'Change Management',
@@ -183,11 +204,11 @@ export class ProjectsService {
     },
     {
       id: 'web-client',
-      number: '04',
+      number: '09',
       icon: 'fa-laptop-code',
       category: 'Web Application',
-      title: 'Web Client',
-      description: 'Dynamic web client application built with vanilla JavaScript for optimal performance. Features include responsive design, real-time updates, interactive UI components, and efficient data handling.',
+      title: 'E-Logbook Application',
+      description: 'Dynamic E-Logbook web application built with vanilla JavaScript for optimal performance. Features include responsive design, real-time updates, interactive UI components, and efficient data handling.',
       tags: ['JavaScript', 'HTML5', 'CSS3', 'REST API'],
       statIcon: 'fa-code',
       statLabel: 'Vanilla JS',
