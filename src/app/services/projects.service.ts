@@ -27,7 +27,6 @@ export class ProjectsService {
       statIcon: 'fa-rocket',
       statLabel: 'Live',
       screenshots: [
-        '/assets/Mobile Apk2/Screenshot 2026-07-01 145250.png',
         '/assets/Mobile Apk2/Screenshot 2026-07-01 145344.png',
         '/assets/Mobile Apk2/Screenshot 2026-07-01 145356.png',
         '/assets/Mobile Apk2/Screenshot 2026-07-01 145407.png',
